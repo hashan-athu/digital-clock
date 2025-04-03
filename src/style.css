@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "LED";
+  src: url("/fonts/Pixel-Regular.ttf");
+}
+@font-face {
+  font-family: "Hack";
+  src: url("/fonts/Hack-Bold.ttf");
+}
+
+.digital-clock {
+  background: #000;
+  color: #fff;
+  display: flex;
+  border-radius: 2rem;
+  user-select: none;
+  padding: 0 2rem;
+  border: 0.5rem solid #2d2d2d;
+}
+.week{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  color: #2d2d2d;
+  font-weight: bold;
+  font-family: "Hack";
+}
+.week > div.active{
+  color: #fff;
+}
+.time{
+  font-family: "LED";
+}
+.hour,
+.min,
+.dot{
+  display: inline-block;
+  font-size: 13rem;
+}
+.sec,
+.dot.sm{
+  display: inline-block;
+  font-size: 8rem;
+}
+.min{
+  display: math;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.dot {
+  animation: blink 1s infinite;
+}
